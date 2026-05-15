@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tadiwa Dzipai | Premium O-Level STEM Tutoring</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <span class="logo">TD Academy</span>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#services">Subjects</a>
+                <a href="#requirements">Requirements</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section Layout -->
+    <header class="hero">
+        <div class="hero-container">
+            <div class="hero-text">
+                <span class="badge">University of Zimbabwe Specialist</span>
+                <h1>Master Your O-Level Sciences</h1>
+                <p>Tailored, high-impact online lessons in Biology, Physics, and Chemistry designed to guarantee high exam marks.</p>
+                <button class="cta-btn main-btn">Book Free Trial Class</button>
+            </div>
+            <div class="hero-image-wrapper">
+                <img src="images/academy_picture.png" alt="Tadiwa Dzipai" class="profile-img">
+            </div>
+        </div>
+    </header>
+
+    <!-- Features / Value Grid -->
+    <section class="value-strip">
+        <div class="strip-item"><strong>1-on-1</strong> Attention</div>
+        <div class="strip-item"><strong>Past Paper</strong> Drill</div>
+        <div class="strip-item"><strong>Flexible</strong> Schedules</div>
+    </section>
+
+    <!-- Main Content Container -->
+    <main class="container">
+
+        <!-- About Section -->
+        <section id="about" class="card">
+            <h2>Meet Your Tutor</h2>
+            <p>Hello! My name is <strong>Tadiwa Dzipai</strong>. I am a 21-year-old student at the University of Zimbabwe. As a software engineering student, I break down complex scientific data into simple, memorable logic frameworks. I don't just teach students to memorize formulas; I teach them to master concepts.</p>
+        </section>
+
+        <!-- Subjects Grid Layout -->
+        <section id="services">
+            <h2 class="section-title">Specialized Subjects</h2>
+            <div class="grid-3x">
+                <div class="card subject-card bio">
+                    <div class="icon-wrap">🧬</div>
+                    <h3>Biology</h3>
+                    <p>Master cell biology, human physiology, genetics, and plant systems with clear visual diagrams.</p>
+                </div>
+                <div class="card subject-card phys">
+                    <div class="icon-wrap">🧲</div>
+                    <h3>Physics</h3>
+                    <p>Demystify mechanics, vectors, electricity, and waves through logical problem-solving structures.</p>
+                </div>
+                <div class="card subject-card chem">
+                    <div class="icon-wrap">🧪</div>
+                    <h3>Chemistry</h3>
+                    <p>Understand stoichiometry, the periodic table, and experimental chemistry with total confidence.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Audio Requirements Layout Layout -->
+        <section id="requirements" class="card requirements-layout">
+            <div class="req-text">
+                <h2>Class Requirements</h2>
+                <p>Are you set up for online learning? Listen to this 60-second voice briefing to confirm your local workspace criteria before our first session.</p>
+            </div>
+            <div class="audio-box">
+                <label>Audio Briefing</label>
+                <audio controls>
+                    <source src="requirements.mp3" type="audio/mpeg">
+                    Your browser does not support audio elements.
+                </audio>
+            </div>
+        </section>
+
+        <!-- FAQ Accordion Layout Layout -->
+        <section id="faq">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="card faq-item">
+                <div class="faq-question">How are online lessons conducted? <span>+</span></div>
+                <div class="faq-answer"><p>Lessons are held interactively over Zoom or Google Meet. We use a digital whiteboard so students can watch formulas and structural diagrams being drawn in real-time.</p></div>
+            </div>
+            <div class="card faq-item">
+                <div class="faq-question">Do you offer learning materials? <span>+</span></div>
+                <div class="faq-answer"><p>Yes. Every student receives digital summary notes, topical past exam question sets, and custom homework tracker sheets after each module.</p></div>
+            </div>
+        </section>
+
+        <!-- Bottom Call to Action Grid -->
+        <section class="final-cta">
+            <h2>Ready to Transform Your Grades?</h2>
+            <p>Slots are limited due to university schedules. Secure your trial class today.</p>
+            <button class="cta-btn secondary-btn">Book Free Trial Class</button>
+        </section>
+
+    </main>
+
+    <!-- Interactive Modal Booking Form -->
+    <div id="bookingModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Book Your Free Trial Class</h2>
+            <p>Fill out this form, and Tadiwa will contact you directly to confirm your slot.</p>
+            
+            <form id="trialForm">
+                <div class="form-group">
+                    <label for="studentName">Student's Full Name:</label>
+                    <input type="text" id="studentName" required placeholder="e.g. John Doe">
+                </div>
+
+                <div class="form-group">
+                    <label for="studentAge">Age:</label>
+                    <input type="number" id="studentAge" required min="12" max="100" placeholder="e.g. 16">
+                </div>
+
+                <div class="form-group">
+                    <label for="examSitting">Exam Sitting Period:</label>
+                    <select id="examSitting" required>
+                        <option value="" disabled selected>Select your exam sitting</option>
+                        <option value="June">June Sitting</option>
+                        <option value="November">November Sitting</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="submit-btn">Submit Booking via WhatsApp</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Clean Footer -->
+    <footer>
+        <p>&copy; 2026 Tadiwa Dzipai Tutoring. Built with pride using VS Code.</p>
+    </footer>
+
+    <!-- Essential Script Connections (Do Not Remove) -->
+    <script src="script.js"></script>
+</body>
+</html>
+   

@@ -1,0 +1,318 @@
+/* Custom Design Tokens */
+:root {
+    --primary: #1e3c72;
+    --secondary: #2a5298;
+    --accent: #ff9f43;
+    --text-dark: #2c3e50;
+    --text-light: #64748b;
+    --bg-main: #f8fafc;
+    --bg-card: #ffffff;
+    --whatsapp: #25d366;
+}
+
+/* Global Fixes */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+/* Navbar Layout */
+.navbar {
+    background: var(--bg-card);
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+.nav-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    font-weight: 800;
+    font-size: 1.3rem;
+    color: var(--primary);
+}
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-dark);
+    margin-left: 20px;
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+/* Hero Multi-column Layout Layout */
+.hero {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+    color: white;
+    padding: 80px 20px;
+}
+.hero-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 40px;
+    align-items: center;
+}
+.badge {
+    background: rgba(255,255,255,0.15);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+.hero-text h1 {
+    font-size: 3rem;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+.hero-text p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    margin-bottom: 30px;
+}
+.profile-img {
+    width: 100%;
+    max-width: 320px;
+    aspect-ratio: 1;
+    border-radius: 24px;
+    border: 6px solid rgba(255,255,255,0.2);
+    object-fit: cover;
+    box-shadow: 0 20px 4px -10px rgba(0,0,0,0.3);
+}
+
+/* Horizontal Trust Strip Layout */
+.value-strip {
+    background: var(--bg-card);
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+}
+.strip-item {
+    font-size: 1.1rem;
+    color: var(--text-light);
+}
+.strip-item strong { color: var(--primary); }
+
+/* Main Grid Wrappers */
+.container {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+.card {
+    background: var(--bg-card);
+    padding: 35px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+    margin-bottom: 40px;
+}
+.section-title {
+    font-size: 1.8rem;
+    color: var(--primary);
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+/* Modern Grid Structure */
+.grid-3x {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1xl));
+    gap: 25px;
+    margin-bottom: 40px;
+}
+.subject-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-top: 4px solid var(--primary);
+}
+.subject-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+.icon-wrap {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+/* Split Section Layout for Requirements */
+.requirements-layout {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 30px;
+    align-items: center;
+}
+.audio-box {
+    background: var(--bg-main);
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+}
+.audio-box label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+}
+audio { width: 100%; }
+
+/* FAQ Dropdown Layout Layout */
+.faq-item {
+    padding: 20px;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+.faq-question {
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    color: var(--text-light);
+}
+.faq-answer p { padding-top: 15px; }
+.faq-item.active .faq-answer { max-height: 200px; }
+
+/* Interactive Buttons */
+.cta-btn {
+    padding: 16px 32px;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+    transition: all 0.2s ease;
+}
+.main-btn {
+    background: var(--accent);
+    color: var(--primary);
+}
+.secondary-btn, .main-btn:hover {
+    background: var(--whatsapp);
+    color: white;
+}
+.final-cta {
+    background: linear-gradient(135deg, #112244 0%, var(--primary) 100%);
+    color: white;
+    padding: 50px;
+    border-radius: 24px;
+    text-align: center;
+}
+.final-cta h2 { margin-bottom: 15px; }
+.final-cta p { opacity: 0.8; margin-bottom: 30px; }
+
+footer {
+    text-align: center;
+    padding: 40px;
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
+/* Make Layout Mobile Responsive */
+@media (max-width: 768px) {
+    .hero-container, .requirements-layout { grid-template-columns: 1fr; }
+    .hero-text { text-align: center; }
+    .value-strip { flex-direction: column; gap: 15px; text-align: center;}
+}
+
+/* Modal Overlay Styling */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Dim background */
+    backdrop-filter: blur(4px);
+    align-items: center;
+    justify-content: center;
+}
+
+/* Modal Content Box Layout */
+.modal-content {
+    background-color: var(--bg-card);
+    padding: 30px;
+    border-radius: 16px;
+    width: 90%;
+    max-width: 450px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    position: relative;
+    animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* Close Button */
+.close-btn {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--text-light);
+}
+.close-btn:hover { color: red; }
+
+/* Form Fields Layout */
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+}
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 1rem;
+    background: #fafafa;
+}
+.form-group input:focus, .form-group select:focus {
+    border-color: var(--secondary);
+    outline: none;
+}
+
+/* Submit Button */
+.submit-btn {
+    width: 100%;
+    background: var(--whatsapp);
+    color: white;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+.submit-btn:hover { background: #1ebd58; }
